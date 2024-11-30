@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Mi Sitio</div>
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre Mí</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#calculadoras">Calculadoras</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sobre-mi" class="section">
+      <div class="card">
+        <h1>Sobre Mí</h1>
+        <p>Estudiante de ingenieria de computacion en el Centro Universitario de Ciencias Exactas e Ingenierias en la Universidad de Guadalajara<p>
+        <div class="cv-grid">
+          <div class="cv-item">
+            <h2>Experiencia Laboral</h2>
+            <p>Cerca de 3 años de experiencia en proyectos innovadores y desarrollo de soluciones creativas.</p>
+          </div>
+          <div class="cv-item">
+            <h2>Educación</h2>
+            <p>Ingeniería en Computacion.</p>
+          </div>
+          <div class="cv-item">
+            <h2>Habilidades</h2>
+            <p>Desarrollo front-end, back-end, diseño, manejo de bases de datos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="clientes" class="section">
+      <div class="card">
+        <h1>Clientes</h1>
+        <div class="clientes-grid">
+          <div class="cliente">Cliente A</div>
+          <div class="cliente">Cliente B</div>
+          <div class="cliente">Cliente C</div>
+          <div class="cliente">Cliente D</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calculadoras" class="section">
+      <div class="card">
+        <h1>Calculadoras</h1>
+        <div class="calculadoras-container">
+          <div class="calculator">
+            <h2>Calculadora de IMC</h2>
+            <input id="peso" type="number" placeholder="Peso (kg)">
+            <input id="altura" type="number" placeholder="Altura (m)">
+            <button onclick="calcularIMC()">Calcular IMC</button>
+            <p id="resultadoIMC"></p>
+          </div>
+          <div class="calculator">
+            <h2>Conversor de Temperaturas</h2>
+            <input id="celsius" type="number" placeholder="Grados Celsius">
+            <button onclick="convertirTemperatura()">Convertir</button>
+            <p id="resultadoTemp"></p>
+          </div>
+          <div class="database">
+            <h2>Base de Datos</h2>
+            <button onclick="mostrarTabla()">Generar Tabla</button>
+            <table id="tabla-datos">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Edad</th>
+                  <th>Ciudad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php include('database.php'); ?>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <div class="card">
+        <h1>Contacto</h1>
+        <form id="contactForm">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje"></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Mi Sitio. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
