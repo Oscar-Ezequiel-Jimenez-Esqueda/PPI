@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Temperatura</h1>
+        <div class="form-group">
+            <label for="inputValue">Introduce la temperatura:</label>
+            <input type="number" id="inputValue" placeholder="Ingresa el valor">
+        </div>
+        
+        <div class="form-group">
+            <label for="inputUnit">Selecciona la unidad de entrada:</label>
+            <select id="inputUnit">
+                <option value="C">Celsius (°C)</option>
+                <option value="F">Fahrenheit (°F)</option>
+                <option value="K">Kelvin (K)</option>
+                <option value="R">Rankine (°R)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="outputUnit">Selecciona la unidad de salida:</label>
+            <select id="outputUnit">
+                <option value="C">Celsius (°C)</option>
+                <option value="F">Fahrenheit (°F)</option>
+                <option value="K">Kelvin (K)</option>
+                <option value="R">Rankine (°R)</option>
+            </select>
+        </div>
+
+        <button id="convertBtn">Convertir</button>
+        <div id="result"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
